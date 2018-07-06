@@ -1,0 +1,21 @@
+{{#each books as |book|}}
+  <div class="row singular-book" data-id="{{book.id}}">
+    <div class="col-xs-10 book-title-{{book.id}}">
+      <h3 data-title="{{book.title}}">
+        {{#if book.title}}
+          {{book.title}}
+        {{else}}
+          Untitled
+        {{/if}}
+      </h3>
+      <p>
+        {{#if book.author}}
+          {{book.author}}
+        {{else}}
+          No Author
+        {{/if}}
+      </p>
+    </div>
+    <hr>
+  </div>
+{{/each}}
